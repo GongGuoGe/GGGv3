@@ -65,6 +65,8 @@
 		71886F751AD1249500D0F861 /* wisdomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wisdomIcon.png; sourceTree = "<group>"; };
 		71886F7A1AD12CD200D0F861 /* SeedTableViewControaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedTableViewControaller.h; sourceTree = "<group>"; };
 		71886F7B1AD12CD200D0F861 /* SeedTableViewControaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedTableViewControaller.m; sourceTree = "<group>"; };
+		71D6E3A71AD528860051516C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		71D6E3A81AD528860051516C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		71DDD7F51AD15F4F001AF339 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		71DDD7F71AD1634C001AF339 /* SqliteMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteMgr.h; sourceTree = "<group>"; };
 		71DDD7F81AD1634C001AF339 /* SqliteMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteMgr.m; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				71735AB81ACAE50000CAB8E2 /* Base */,
+				71D6E3A71AD528860051516C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				71735ABD1ACAE50000CAB8E2 /* Base */,
+				71D6E3A81AD528860051516C /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

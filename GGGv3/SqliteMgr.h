@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
 @interface SqliteMgr : NSObject
 {
@@ -15,5 +16,10 @@
 }
 
 +(SqliteMgr *)sharedInstanceMethod;
+
+-(BOOL)openDB;
+-(void)closeDB;
+
+-(NSArray*)getAllSeeds;
 
 @end
