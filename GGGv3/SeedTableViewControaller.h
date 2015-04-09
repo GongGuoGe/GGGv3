@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SeedTableViewControaller : UITableViewController
-
+@property (retain)NSArray* seeds;
 @end

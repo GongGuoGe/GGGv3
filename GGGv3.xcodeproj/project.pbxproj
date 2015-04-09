@@ -25,6 +25,8 @@
 		71886F781AD1249500D0F861 /* wealthIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71886F741AD1249500D0F861 /* wealthIcon.png */; };
 		71886F791AD1249500D0F861 /* wisdomIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71886F751AD1249500D0F861 /* wisdomIcon.png */; };
 		71886F7C1AD12CD200D0F861 /* SeedTableViewControaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 71886F7B1AD12CD200D0F861 /* SeedTableViewControaller.m */; };
+		71B3EF5C1AD65A3D005C61B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71B3EF5E1AD65A3D005C61B9 /* Localizable.strings */; };
+		71B3EF631AD68F29005C61B9 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B3EF621AD68F29005C61B9 /* SeedTableViewCell.m */; };
 		71DDD7F61AD15F4F001AF339 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DDD7F51AD15F4F001AF339 /* libsqlite3.dylib */; };
 		71DDD7F91AD1634C001AF339 /* SqliteMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDD7F81AD1634C001AF339 /* SqliteMgr.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,10 @@
 		71886F751AD1249500D0F861 /* wisdomIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wisdomIcon.png; sourceTree = "<group>"; };
 		71886F7A1AD12CD200D0F861 /* SeedTableViewControaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedTableViewControaller.h; sourceTree = "<group>"; };
 		71886F7B1AD12CD200D0F861 /* SeedTableViewControaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedTableViewControaller.m; sourceTree = "<group>"; };
+		71B3EF5D1AD65A3D005C61B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		71B3EF601AD65E92005C61B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71B3EF611AD68F29005C61B9 /* SeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedTableViewCell.h; sourceTree = "<group>"; };
+		71B3EF621AD68F29005C61B9 /* SeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedTableViewCell.m; sourceTree = "<group>"; };
 		71D6E3A71AD528860051516C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		71D6E3A81AD528860051516C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		71DDD7F51AD15F4F001AF339 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -137,12 +143,15 @@
 				71735AB21ACAE50000CAB8E2 /* AppDelegate.m */,
 				71735AB41ACAE50000CAB8E2 /* ViewController.h */,
 				71735AB51ACAE50000CAB8E2 /* ViewController.m */,
-				71735AB71ACAE50000CAB8E2 /* Main.storyboard */,
 				71886F7A1AD12CD200D0F861 /* SeedTableViewControaller.h */,
 				71886F7B1AD12CD200D0F861 /* SeedTableViewControaller.m */,
+				71735AB71ACAE50000CAB8E2 /* Main.storyboard */,
 				71735ABA1ACAE50000CAB8E2 /* Images.xcassets */,
 				71735ABC1ACAE50000CAB8E2 /* LaunchScreen.xib */,
 				71735AAD1ACAE50000CAB8E2 /* Supporting Files */,
+				71B3EF5E1AD65A3D005C61B9 /* Localizable.strings */,
+				71B3EF611AD68F29005C61B9 /* SeedTableViewCell.h */,
+				71B3EF621AD68F29005C61B9 /* SeedTableViewCell.m */,
 			);
 			path = GGGv3;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 				7155CBEE1ACFB854009A2982 /* 2.png in Resources */,
 				7155CBEF1ACFB854009A2982 /* 3.png in Resources */,
 				71886F791AD1249500D0F861 /* wisdomIcon.png in Resources */,
+				71B3EF5C1AD65A3D005C61B9 /* Localizable.strings in Resources */,
 				71735ABE1ACAE50000CAB8E2 /* LaunchScreen.xib in Resources */,
 				71735ABB1ACAE50000CAB8E2 /* Images.xcassets in Resources */,
 				71886F781AD1249500D0F861 /* wealthIcon.png in Resources */,
@@ -286,6 +296,7 @@
 			files = (
 				71735AB61ACAE50000CAB8E2 /* ViewController.m in Sources */,
 				71735AB31ACAE50000CAB8E2 /* AppDelegate.m in Sources */,
+				71B3EF631AD68F29005C61B9 /* SeedTableViewCell.m in Sources */,
 				71886F7C1AD12CD200D0F861 /* SeedTableViewControaller.m in Sources */,
 				71735AB01ACAE50000CAB8E2 /* main.m in Sources */,
 				71DDD7F91AD1634C001AF339 /* SqliteMgr.m in Sources */,
@@ -327,6 +338,15 @@
 				71D6E3A81AD528860051516C /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		71B3EF5E1AD65A3D005C61B9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71B3EF5D1AD65A3D005C61B9 /* zh-Hans */,
+				71B3EF601AD65E92005C61B9 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

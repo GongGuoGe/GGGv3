@@ -15,7 +15,7 @@
     NSString* databaseName;
 }
 
-+(SqliteMgr *)sharedInstanceMethod;
++(SqliteMgr *)instance;
 
 -(BOOL)openDB;
 -(void)closeDB;

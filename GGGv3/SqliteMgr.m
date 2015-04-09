@@ -14,7 +14,7 @@ static SqliteMgr * sharedInstance = nil;
 @implementation SqliteMgr
 
 //获取单例
-+(SqliteMgr *)sharedInstanceMethod
++(SqliteMgr *)instance
 {
     @synchronized(self) {
         if (sharedInstance == nil)
@@ -92,25 +92,25 @@ static SqliteMgr * sharedInstance = nil;
     {
         return FALSE;
     }
-    sql = [NSString stringWithFormat:@"insert into t_Seeds (name) values ('%@')", NSLocalizedString(@"9fu-Ns-EVh.text", nil)];
+    sql = [NSString stringWithFormat:@"insert into t_Seeds (name, static) values ('%@', 1)", NSLocalizedString(@"Wealth", nil)];
     res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
     if (res != SQLITE_OK)
     {
         return FALSE;
     }
-    sql = [NSString stringWithFormat:@"insert into t_Seeds (name) values ('%@')", NSLocalizedString(@"Health", nil)];
+    sql = [NSString stringWithFormat:@"insert into t_Seeds (name, static) values ('%@', 1)", NSLocalizedString(@"Health", nil)];
     res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
     if (res != SQLITE_OK)
     {
         return FALSE;
     }
-    sql = [NSString stringWithFormat:@"insert into t_Seeds (name) values ('%@')", NSLocalizedString(@"Wisdom", nil)];
+    sql = [NSString stringWithFormat:@"insert into t_Seeds (name, static) values ('%@', 1)", NSLocalizedString(@"Wisdom", nil)];
     res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
     if (res != SQLITE_OK)
     {
         return FALSE;
     }
-    sql = [NSString stringWithFormat:@"insert into t_Seeds (name) values ('%@')", NSLocalizedString(@"Harmonious", nil)];
+    sql = [NSString stringWithFormat:@"insert into t_Seeds (name, static) values ('%@', 1)", NSLocalizedString(@"Harmonious", nil)];
     res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
     if (res != SQLITE_OK)
     {
@@ -128,7 +128,20 @@ static SqliteMgr * sharedInstance = nil;
 
 -(NSArray*)getAllSeeds
 {
-    return nil;
+    NSMutableArray* arr = [[NSMutableArray alloc] init];
+    NSString* sql = @"select name from t_Seeds order by id";
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        //依次读取数据库表格FIELDS中每行的内容，并显示在对应的TextField
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            //获得数据
+            char* cName = (char*)sqlite3_column_text(statement, 0);
+            [arr addObject:[[NSString alloc] initWithUTF8String:cName]];
+        }
+        sqlite3_finalize(statement);
+    }
+    
+    return arr;
 }
 
 @end
