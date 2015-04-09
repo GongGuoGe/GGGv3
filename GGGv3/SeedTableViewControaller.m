@@ -47,6 +47,7 @@
     // Configure the cell...
     NSInteger idx = [indexPath item];
     [cell.seedName setText:self.seeds[idx]];
+    [cell setIconImg:idx];
     return cell;
 }
 
