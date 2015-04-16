@@ -120,6 +120,40 @@ static SqliteMgr * sharedInstance = nil;
 
 }
 
+
+-(BOOL)checkContentTable
+{
+    sqlite3_stmt *stmp;
+    char* errmsg;
+    NSString* sql = @"select count(*) as 'count' from sqlite_master where type ='table' and name = 't_Contents'";
+    int res= sqlite3_prepare_v2(database, [sql UTF8String], -1, &stmp, NULL);
+    if (res == SQLITE_OK)
+    {
+        while (sqlite3_step(stmp)==SQLITE_ROW)
+        {
+            int tableCount = sqlite3_column_int(stmp, 0);
+            if (tableCount == 1)
+            {
+                return TRUE;
+            }
+        }
+    }
+    sql = @"create table t_Contents (id INTEGER PRIMARY KEY, \
+        seedName TEXT NOT NULL, \
+        positive TEXT NOT NULL, \
+        negative TEXT NOT NULL, \
+        iWant TEXT NOT NULL, \
+        isPublic INTEGER default 0, \
+        createTime TEXT NOT NULL)";
+    res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
+    if (res != SQLITE_OK)
+    {
+        return FALSE;
+    }
+    
+    return TRUE;
+}
+
 -(void)closeDB
 {
     sqlite3_close(database);
@@ -143,6 +177,26 @@ static SqliteMgr * sharedInstance = nil;
     
     return arr;
 }
+
+
+-(BOOL)saveSeed:(NSString*)seedName positive:(NSString*)pos negative:(NSString*)neg iWant:(NSString*)iwant isPublic:(BOOL)isPub
+{
+    if (![self checkContentTable]) {
+        return FALSE;
+    }
+    
+    char* errmsg;
+    NSString* sql = [NSString stringWithFormat:@"insert into t_Contents (seedName, positive, negative, iWant, isPublic, createTime) \
+                     values('%@', '%@', '%@', '%@', %d, datetime('now', 'localtime'))", seedName, pos, neg, iwant, isPub ? 1 : 0, nil];
+    int res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
+    if (res != SQLITE_OK)
+    {
+        NSLog(@"%s", errmsg);
+        return FALSE;
+    }
+    return TRUE;
+}
+
 
 @end
 

@@ -11,3 +11,10 @@
 "Health" = "健康";
 "Wisdom" = "智慧";
 "Harmonious" = "和谐";
+"AddContentError" = "无法创建";
+"NoPositive" = "\"正面\"不能为空";
+"NoNegative" = "\"负面\"不能为空";
+"NoIWant" = "\"我要\"不能为空";
+"CannotSaveContent" = "保存失败";
+"OK" = "确定";
+"Cancel" = "取消";

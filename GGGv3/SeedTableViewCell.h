@@ -11,8 +11,8 @@
 @interface SeedTableViewCell : UITableViewCell
 
 
-@property (assign) IBOutlet UIImageView* icon;
-@property (assign) IBOutlet UILabel* seedName;
+@property (readonly) IBOutlet UIImageView* icon;
+@property (readonly) IBOutlet UILabel* seedName;
 
 -(void)setIconImg:(NSInteger)index;
 
