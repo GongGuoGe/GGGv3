@@ -75,6 +75,9 @@
                                 <state key="normal" image="2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iRH-CN-3hJ" kind="show" id="ob0-yk-8UU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCg-nS-qdx">
                                 <rect key="frame" x="246" y="173" width="98" height="98"/>
@@ -207,6 +210,34 @@
             </objects>
             <point key="canvasLocation" x="1108" y="686"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="axX-UN-PLL">
+            <objects>
+                <viewController id="iRH-CN-3hJ" customClass="VRGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Izy-PJ-BmH"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlN-R2-IY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OXg-Wc-uR0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-ds-KZk" customClass="VRGCalendarView">
+                                <rect key="frame" x="92" y="96" width="416" height="349"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YMq-ds-KZk" firstAttribute="top" secondItem="Izy-PJ-BmH" secondAttribute="bottom" constant="32" id="9ph-dY-LU8"/>
+                            <constraint firstAttribute="centerX" secondItem="YMq-ds-KZk" secondAttribute="centerX" id="ace-pV-qkU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hv6-k1-jeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1407"/>
+        </scene>
         <!--Seed Table View Controaller-->
         <scene sceneID="X8y-Tr-4ZR">
             <objects>
@@ -264,7 +295,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb3-Ux-q5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="686"/>
+            <point key="canvasLocation" x="1767" y="686"/>
         </scene>
         <!--Seed Editor View Controller-->
         <scene sceneID="bRO-rl-wua">
@@ -341,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDt-y6-ani" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377" y="686"/>
+            <point key="canvasLocation" x="2425" y="686"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OSN-sY-Py8">
