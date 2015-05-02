@@ -11,4 +11,6 @@
 
 @interface VRGViewController : UIViewController <VRGCalendarViewDelegate>
 
+@property (retain) NSArray* contents;
+
 @end

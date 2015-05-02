@@ -81,7 +81,7 @@
         return;
     }
     
-    if (![SqliteMgr.instance saveSeed:seedName positive:p negative:n iWant:i isPublic:self.isPublic.on]) {
+    if (![SqliteMgr.instance saveContent:seedName positive:p negative:n iWant:i isPublic:self.isPublic.on]) {
         UIAlertView *mBoxView = [[UIAlertView alloc]
                                  initWithTitle:NSLocalizedString(@"AddContentError", nil)
                                  message:NSLocalizedString(@"CannotSaveContent", nil)
