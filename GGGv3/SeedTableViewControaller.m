@@ -9,6 +9,7 @@
 #import "SeedTableViewControaller.h"
 #import "SqliteMgr.h"
 #import "SeedTableViewCell.h"
+#import "SeedEditorViewController.h"
 
 @implementation SeedTableViewControaller
 
@@ -19,6 +20,19 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.seeds = [SqliteMgr.instance getAllSeeds];
 }
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([sender isKindOfClass:[SeedTableViewCell class]] &&
+        [[segue destinationViewController] isKindOfClass:[SeedEditorViewController class]]) {
+        SeedTableViewCell* tvc = sender;
+        SeedEditorViewController* sevc = [segue destinationViewController];
+        sevc.seedName = [tvc.seedName text];
+    }
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

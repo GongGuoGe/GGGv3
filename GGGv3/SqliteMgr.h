@@ -21,5 +21,8 @@
 -(void)closeDB;
 
 -(NSArray*)getAllSeeds;
+-(BOOL)saveContent:(NSString*)seedName positive:(NSString*)pos negative:(NSString*)neg iWant:(NSString*)iwant isPublic:(BOOL)isPub;
+
+-(NSArray*)getAllContent;
 
 @end

@@ -120,6 +120,40 @@ static SqliteMgr * sharedInstance = nil;
 
 }
 
+
+-(BOOL)checkContentTable
+{
+    sqlite3_stmt *stmp;
+    char* errmsg;
+    NSString* sql = @"select count(*) as 'count' from sqlite_master where type ='table' and name = 't_Contents'";
+    int res= sqlite3_prepare_v2(database, [sql UTF8String], -1, &stmp, NULL);
+    if (res == SQLITE_OK)
+    {
+        while (sqlite3_step(stmp)==SQLITE_ROW)
+        {
+            int tableCount = sqlite3_column_int(stmp, 0);
+            if (tableCount == 1)
+            {
+                return TRUE;
+            }
+        }
+    }
+    sql = @"create table t_Contents (id INTEGER PRIMARY KEY, \
+        seedName TEXT NOT NULL, \
+        positive TEXT NOT NULL, \
+        negative TEXT NOT NULL, \
+        iWant TEXT NOT NULL, \
+        isPublic INTEGER default 0, \
+        createTime TEXT NOT NULL)";
+    res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
+    if (res != SQLITE_OK)
+    {
+        return FALSE;
+    }
+    
+    return TRUE;
+}
+
 -(void)closeDB
 {
     sqlite3_close(database);
@@ -144,6 +178,63 @@ static SqliteMgr * sharedInstance = nil;
     return arr;
 }
 
+
+-(BOOL)saveContent:(NSString*)seedName positive:(NSString*)pos negative:(NSString*)neg iWant:(NSString*)iwant isPublic:(BOOL)isPub
+{
+    if (![self checkContentTable]) {
+        return FALSE;
+    }
+    
+    char* errmsg;
+    NSString* sql = [NSString stringWithFormat:@"insert into t_Contents (seedName, positive, negative, iWant, isPublic, createTime) \
+                     values('%@', '%@', '%@', '%@', %d, datetime('now', 'localtime'))", seedName, pos, neg, iwant, isPub ? 1 : 0, nil];
+    int res = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errmsg);
+    if (res != SQLITE_OK)
+    {
+        NSLog(@"%s", errmsg);
+        return FALSE;
+    }
+    return TRUE;
+}
+
+-(NSArray*)getAllContent {
+    NSMutableArray* arr = [[NSMutableArray alloc] init];
+    if (![self checkContentTable]) {
+        return arr;
+    }
+    
+    NSString* sql = @"select seedName, positive, negative, iWant, isPublic, createTime from t_Contents";
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, nil) == SQLITE_OK) {
+        //依次读取数据库表格FIELDS中每行的内容，并显示在对应的TextField
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            //获得数据
+//            seedName, positive, negative, iWant, isPublic, createTime
+            char* seedName = (char*)sqlite3_column_text(statement, 0);
+            char* positive = (char*)sqlite3_column_text(statement, 1);
+            char* negative = (char*)sqlite3_column_text(statement, 2);
+            char* iWant = (char*)sqlite3_column_text(statement, 3);
+            NSInteger isPublic = (NSInteger)sqlite3_column_int64(statement, 4);
+            char* createTime = (char*)sqlite3_column_text(statement, 5);
+            
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"y-M-d HH:mm:ss"];
+            NSDate *date=[dateFormatter dateFromString:[NSString stringWithUTF8String:createTime]];
+            
+            NSDictionary* content = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     [NSString stringWithUTF8String:seedName], @"seedName",
+                                     [NSString stringWithUTF8String:positive], @"positive",
+                                     [NSString stringWithUTF8String:negative], @"negative",
+                                     [NSString stringWithUTF8String:iWant], @"iWant",
+                                     [NSNumber numberWithInteger:isPublic], @"isPublic",
+                                     date, @"createTime", nil];
+
+            [arr addObject:content];
+        }
+        sqlite3_finalize(statement);
+    }
+    return arr;
+}
 @end
 
 

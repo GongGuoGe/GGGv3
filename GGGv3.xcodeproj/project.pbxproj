@@ -13,6 +13,12 @@
 		7155CBF01ACFB854009A2982 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7155CBED1ACFB854009A2982 /* 4.png */; };
 		7155CBF31ACFC7E5009A2982 /* 1__.png in Resources */ = {isa = PBXBuildFile; fileRef = 7155CBF11ACFC7E5009A2982 /* 1__.png */; };
 		7155CBF41ACFC7E5009A2982 /* 1_.png in Resources */ = {isa = PBXBuildFile; fileRef = 7155CBF21ACFC7E5009A2982 /* 1_.png */; };
+		716C45541AEF8CEE0016F9B8 /* NSDate+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C45491AEF8CEE0016F9B8 /* NSDate+convenience.m */; };
+		716C45551AEF8CEE0016F9B8 /* NSMutableArray+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C454B1AEF8CEE0016F9B8 /* NSMutableArray+convenience.m */; };
+		716C45561AEF8CEE0016F9B8 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C454D1AEF8CEE0016F9B8 /* UIColor+expanded.m */; };
+		716C45571AEF8CEE0016F9B8 /* UIView+convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C454F1AEF8CEE0016F9B8 /* UIView+convenience.m */; };
+		716C45581AEF8CEE0016F9B8 /* VRGCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C45511AEF8CEE0016F9B8 /* VRGCalendarView.m */; };
+		716C45591AEF8CEE0016F9B8 /* VRGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716C45531AEF8CEE0016F9B8 /* VRGViewController.m */; };
 		71735AB01ACAE50000CAB8E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71735AAF1ACAE50000CAB8E2 /* main.m */; };
 		71735AB31ACAE50000CAB8E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71735AB21ACAE50000CAB8E2 /* AppDelegate.m */; };
 		71735AB61ACAE50000CAB8E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71735AB51ACAE50000CAB8E2 /* ViewController.m */; };
@@ -29,6 +35,7 @@
 		71B3EF631AD68F29005C61B9 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B3EF621AD68F29005C61B9 /* SeedTableViewCell.m */; };
 		71DDD7F61AD15F4F001AF339 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DDD7F51AD15F4F001AF339 /* libsqlite3.dylib */; };
 		71DDD7F91AD1634C001AF339 /* SqliteMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DDD7F81AD1634C001AF339 /* SqliteMgr.m */; };
+		71F0AC211ADDF522007DF779 /* SeedEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F0AC201ADDF522007DF779 /* SeedEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,18 @@
 		7155CBED1ACFB854009A2982 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		7155CBF11ACFC7E5009A2982 /* 1__.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1__.png; sourceTree = "<group>"; };
 		7155CBF21ACFC7E5009A2982 /* 1_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_.png; sourceTree = "<group>"; };
+		716C45481AEF8CEE0016F9B8 /* NSDate+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+convenience.h"; sourceTree = "<group>"; };
+		716C45491AEF8CEE0016F9B8 /* NSDate+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+convenience.m"; sourceTree = "<group>"; };
+		716C454A1AEF8CEE0016F9B8 /* NSMutableArray+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+convenience.h"; sourceTree = "<group>"; };
+		716C454B1AEF8CEE0016F9B8 /* NSMutableArray+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+convenience.m"; sourceTree = "<group>"; };
+		716C454C1AEF8CEE0016F9B8 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		716C454D1AEF8CEE0016F9B8 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		716C454E1AEF8CEE0016F9B8 /* UIView+convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+convenience.h"; sourceTree = "<group>"; };
+		716C454F1AEF8CEE0016F9B8 /* UIView+convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+convenience.m"; sourceTree = "<group>"; };
+		716C45501AEF8CEE0016F9B8 /* VRGCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGCalendarView.h; sourceTree = "<group>"; };
+		716C45511AEF8CEE0016F9B8 /* VRGCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGCalendarView.m; sourceTree = "<group>"; };
+		716C45521AEF8CEE0016F9B8 /* VRGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRGViewController.h; sourceTree = "<group>"; };
+		716C45531AEF8CEE0016F9B8 /* VRGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRGViewController.m; sourceTree = "<group>"; };
 		71735AAA1ACAE50000CAB8E2 /* GGGv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGGv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71735AAE1ACAE50000CAB8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71735AAF1ACAE50000CAB8E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +95,8 @@
 		71DDD7F51AD15F4F001AF339 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		71DDD7F71AD1634C001AF339 /* SqliteMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteMgr.h; sourceTree = "<group>"; };
 		71DDD7F81AD1634C001AF339 /* SqliteMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteMgr.m; sourceTree = "<group>"; };
+		71F0AC1F1ADDF522007DF779 /* SeedEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedEditorViewController.h; sourceTree = "<group>"; };
+		71F0AC201ADDF522007DF779 /* SeedEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedEditorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +135,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		716C45471AEF8CAB0016F9B8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				716C45481AEF8CEE0016F9B8 /* NSDate+convenience.h */,
+				716C45491AEF8CEE0016F9B8 /* NSDate+convenience.m */,
+				716C454A1AEF8CEE0016F9B8 /* NSMutableArray+convenience.h */,
+				716C454B1AEF8CEE0016F9B8 /* NSMutableArray+convenience.m */,
+				716C454C1AEF8CEE0016F9B8 /* UIColor+expanded.h */,
+				716C454D1AEF8CEE0016F9B8 /* UIColor+expanded.m */,
+				716C454E1AEF8CEE0016F9B8 /* UIView+convenience.h */,
+				716C454F1AEF8CEE0016F9B8 /* UIView+convenience.m */,
+				716C45501AEF8CEE0016F9B8 /* VRGCalendarView.h */,
+				716C45511AEF8CEE0016F9B8 /* VRGCalendarView.m */,
+				716C45521AEF8CEE0016F9B8 /* VRGViewController.h */,
+				716C45531AEF8CEE0016F9B8 /* VRGViewController.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		71735AA11ACAE50000CAB8E2 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +176,7 @@
 		71735AAC1ACAE50000CAB8E2 /* GGGv3 */ = {
 			isa = PBXGroup;
 			children = (
+				716C45471AEF8CAB0016F9B8 /* Calendar */,
 				71DDD7F71AD1634C001AF339 /* SqliteMgr.h */,
 				71DDD7F81AD1634C001AF339 /* SqliteMgr.m */,
 				7155CBE81ACF8044009A2982 /* Resources */,
@@ -152,6 +193,8 @@
 				71B3EF5E1AD65A3D005C61B9 /* Localizable.strings */,
 				71B3EF611AD68F29005C61B9 /* SeedTableViewCell.h */,
 				71B3EF621AD68F29005C61B9 /* SeedTableViewCell.m */,
+				71F0AC1F1ADDF522007DF779 /* SeedEditorViewController.h */,
+				71F0AC201ADDF522007DF779 /* SeedEditorViewController.m */,
 			);
 			path = GGGv3;
 			sourceTree = "<group>";
@@ -294,12 +337,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716C45581AEF8CEE0016F9B8 /* VRGCalendarView.m in Sources */,
+				716C45561AEF8CEE0016F9B8 /* UIColor+expanded.m in Sources */,
 				71735AB61ACAE50000CAB8E2 /* ViewController.m in Sources */,
 				71735AB31ACAE50000CAB8E2 /* AppDelegate.m in Sources */,
 				71B3EF631AD68F29005C61B9 /* SeedTableViewCell.m in Sources */,
 				71886F7C1AD12CD200D0F861 /* SeedTableViewControaller.m in Sources */,
 				71735AB01ACAE50000CAB8E2 /* main.m in Sources */,
 				71DDD7F91AD1634C001AF339 /* SqliteMgr.m in Sources */,
+				716C45541AEF8CEE0016F9B8 /* NSDate+convenience.m in Sources */,
+				71F0AC211ADDF522007DF779 /* SeedEditorViewController.m in Sources */,
+				716C45571AEF8CEE0016F9B8 /* UIView+convenience.m in Sources */,
+				716C45551AEF8CEE0016F9B8 /* NSMutableArray+convenience.m in Sources */,
+				716C45591AEF8CEE0016F9B8 /* VRGViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
